@@ -1394,6 +1394,7 @@
     </svg>
     @tonomatsu_bonsai
   </a>
+  <a href="#" class="footer-insta" onclick="document.getElementById('privacyModal').classList.add('open');return false;">プライバシーポリシー</a>
   <div class="footer-copy">© 2025 殿松BONSAI. All rights reserved.</div>
 </footer>
 
@@ -1486,6 +1487,55 @@
         <button onclick="document.getElementById('pricingModal').classList.remove('open')" class="btn-outline" style="color:var(--ink);border-color:var(--mist);padding:0.8rem 2rem;font-family:'Noto Serif JP',serif;font-size:0.82rem;letter-spacing:0.15em;cursor:pointer;background:none;">閉じる</button>
       </div>
 
+    </div>
+  </div>
+</div>
+
+<!-- PRIVACY POLICY MODAL -->
+<div class="modal-overlay" id="privacyModal" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="document.getElementById('privacyModal').classList.remove('open')">×</button>
+
+    <div class="modal-header">
+      <div class="modal-header-label">Privacy Policy</div>
+      <div class="modal-header-title">プライバシーポリシー</div>
+    </div>
+
+    <div class="modal-body" style="font-family:'Noto Serif JP',serif;font-size:0.86rem;line-height:1.9;color:var(--ink);">
+      <p style="margin-bottom:1.5rem;">
+        殿松BONSAI（以下「当方」といいます）は、お客様の個人情報を大切に取り扱うことが社会的責任であると認識し、以下の方針に基づき適切に取得・利用・管理いたします。
+      </p>
+
+      <div class="pricing-block-title" style="font-family:'Shippori Mincho',serif;font-size:0.9rem;margin-bottom:0.6rem;">1. 取得する情報</div>
+      <p style="margin-bottom:1.5rem;">
+        LINE公式アカウントの友だち追加やメールでのお問い合わせの際に、お名前・LINEアカウント情報・メールアドレス・お問い合わせ内容などをお客様よりご提供いただく場合があります。
+      </p>
+
+      <div class="pricing-block-title" style="font-family:'Shippori Mincho',serif;font-size:0.9rem;margin-bottom:0.6rem;">2. 利用目的</div>
+      <p style="margin-bottom:1.5rem;">
+        取得した情報は、盆栽レンタル・リースサービスに関するお問い合わせへの回答、お見積り・ご契約手続き、サービス提供・メンテナンスに関するご連絡のためにのみ利用し、これら以外の目的では利用いたしません。
+      </p>
+
+      <div class="pricing-block-title" style="font-family:'Shippori Mincho',serif;font-size:0.9rem;margin-bottom:0.6rem;">3. 第三者提供</div>
+      <p style="margin-bottom:1.5rem;">
+        法令に基づく場合を除き、お客様の同意なく個人情報を第三者に提供することはありません。
+      </p>
+
+      <div class="pricing-block-title" style="font-family:'Shippori Mincho',serif;font-size:0.9rem;margin-bottom:0.6rem;">4. 外部サービスの利用について</div>
+      <p style="margin-bottom:1.5rem;">
+        当サイトでは、Instagram投稿を表示するために外部埋め込みサービス（Elfsight）を利用しています。これらのサービスにより、Cookie等を通じてアクセス情報が取得される場合があります。また、お問い合わせにはLINE公式アカウントを利用しており、LINE株式会社のプライバシーポリシーが適用されます。
+      </p>
+
+      <div class="pricing-block-title" style="font-family:'Shippori Mincho',serif;font-size:0.9rem;margin-bottom:0.6rem;">5. 個人情報の開示・訂正・削除等</div>
+      <p style="margin-bottom:1.5rem;">
+        お客様ご自身の個人情報について、開示・訂正・利用停止・削除等をご希望の場合は、下記のお問い合わせ先までご連絡ください。ご本人確認の上、速やかに対応いたします。
+      </p>
+
+      <div class="pricing-block-title" style="font-family:'Shippori Mincho',serif;font-size:0.9rem;margin-bottom:0.6rem;">6. お問い合わせ窓口</div>
+      <p style="margin-bottom:0.3rem;">殿松BONSAI</p>
+      <p style="margin-bottom:1.5rem;">Email: <a href="mailto:tonomatsu0119bonsai@gmail.com" style="color:var(--ink);">tonomatsu0119bonsai@gmail.com</a></p>
+
+      <p style="font-size:0.78rem;color:var(--mist,#888);">制定日：2026年7月26日</p>
     </div>
   </div>
 </div>
