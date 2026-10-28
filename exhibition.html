@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新潟支部展示会｜殿松BONSAI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Shippori+Mincho:wght@400;600;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink: #1a1612;
+      --washi: #f5f0e8;
+      --cedar: #7a5c3a;
+      --gold: #b89a5a;
+      --mist: #e8e2d6;
+      --pale: #f9f6f0;
+    }
+
+    body {
+      background: var(--pale);
+      color: var(--ink);
+      font-family: 'Noto Serif JP', serif;
+    }
+
+    header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.2rem 2rem;
+      background: var(--washi);
+      border-bottom: 1px solid var(--mist);
+    }
+    .logo {
+      font-family: 'Shippori Mincho', serif;
+      font-size: 1.3rem; font-weight: 600; letter-spacing: 0.15em;
+      color: var(--ink); text-decoration: none;
+    }
+    .logo span { color: var(--gold); }
+    .back {
+      font-size: 0.8rem; letter-spacing: 0.15em;
+      color: var(--ink); text-decoration: none;
+      border: 1px solid var(--gold); padding: 0.6rem 1.2rem;
+      transition: all 0.3s ease;
+    }
+    .back:hover { background: var(--gold); color: var(--washi); }
+
+    main { max-width: 1100px; margin: 0 auto; padding: 5rem 1.5rem 6rem; }
+
+    .page-header { text-align: center; margin-bottom: 3.5rem; }
+    .label {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; font-size: 0.9rem; letter-spacing: 0.4em;
+      color: var(--gold); margin-bottom: 1rem;
+    }
+    h1 {
+      font-family: 'Shippori Mincho', serif;
+      font-size: clamp(1.6rem, 3vw, 2.8rem);
+      font-weight: 600; letter-spacing: 0.08em;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1.2rem;
+    }
+    .gallery button { grid-column: span 2; aspect-ratio: 3 / 4; }
+    .gallery .wide { grid-column: span 3; aspect-ratio: 4 / 3; }
+    .gallery button {
+      display: block; width: 100%; padding: 0; border: none;
+      background: none; cursor: zoom-in; overflow: hidden;
+    }
+    .gallery img {
+      display: block; width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .gallery button:hover img { transform: scale(1.03); }
+
+    .lightbox {
+      position: fixed; inset: 0; z-index: 100;
+      background: rgba(26,22,18,0.92);
+      display: none; align-items: center; justify-content: center;
+      padding: 1.5rem; cursor: zoom-out;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img { max-width: 100%; max-height: 100%; object-fit: contain; }
+
+    .cta { text-align: center; margin-top: 4rem; }
+    .btn-primary {
+      display: inline-block;
+      background: var(--gold); color: var(--ink);
+      padding: 0.85rem 2.4rem;
+      font-size: 0.82rem; letter-spacing: 0.2em;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .btn-primary:hover { background: var(--cedar); color: var(--washi); }
+
+    footer {
+      text-align: center; padding: 2rem;
+      background: var(--ink); color: rgba(245,240,232,0.4);
+      font-size: 0.72rem; letter-spacing: 0.1em;
+    }
+
+    @media (max-width: 600px) {
+      header { padding: 1rem; }
+      main { padding: 3.5rem 1rem 4rem; }
+      .gallery { grid-template-columns: 1fr; gap: 0.8rem; }
+      .gallery button, .gallery .wide { grid-column: auto; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">殿松<span>BONSAI</span></a>
+  <a href="index.html" class="back">トップへ戻る</a>
+</header>
+
+<main>
+  <div class="page-header">
+    <span class="label">Exhibition</span>
+    <h1>新潟支部展示会</h1>
+  </div>
+
+  <div class="gallery">
+    <button class="wide" type="button"><img src="images/exhibition/niigata-01.jpg" alt="新潟支部展示会の会場風景"></button>
+    <button class="wide" type="button"><img src="images/exhibition/niigata-02.jpg" alt="展示台に飾られた真柏の盆栽"></button>
+    <button type="button"><img src="images/exhibition/niigata-03.jpg" alt="真柏の盆栽を斜めから見た様子" loading="lazy"></button>
+    <button type="button"><img src="images/exhibition/niigata-04.jpg" alt="真柏の幹と舎利の様子" loading="lazy"></button>
+    <button type="button"><img src="images/exhibition/niigata-05.jpg" alt="真柏の枝ぶりのアップ" loading="lazy"></button>
+  </div>
+
+  <div class="cta">
+    <a href="https://lin.ee/7SfoUdK" target="_blank" rel="noopener" class="btn-primary">お問い合わせ</a>
+  </div>
+</main>
+
+<div class="lightbox" id="lightbox"><img src="" alt=""></div>
+
+<footer>© 2025 殿松BONSAI. All rights reserved.</footer>
+
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = lightbox.querySelector('img');
+  document.querySelectorAll('.gallery button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const img = btn.querySelector('img');
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add('open');
+    });
+  });
+  lightbox.addEventListener('click', () => lightbox.classList.remove('open'));
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') lightbox.classList.remove('open');
+  });
+</script>
+
+</body>
+</html>
